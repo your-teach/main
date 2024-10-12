@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"> -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yourteach - онлайн занятия по программированию</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style_menu_mobile.css" rel="stylesheet" type="text/css">
+    <link type="image/png" rel="icon" href="logo-v5.png">
+    <link type="image/x-icon" rel="shortcut icon" href="logo-v5.ico">
+</head>
+<body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(94970545, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/94970545" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- <script>document.body.addEventListener("load",(t=>{t.target.classList.contains("interactive")&&t.target.setAttribute("data-readystate","complete")}),{capture:!0});const c={light:"#ffffff",dark:"#1b1b1b"};if(window&&document.documentElement)try{const t=window.localStorage.getItem("theme");t&&(document.documentElement.className=t,document.documentElement.style.backgroundColor=c[t])}catch(t){console.warn("Unable to read theme from localStorage",t)}</script> -->
+    <section id="top">
+        <div id="menu">
+                <a id="toggle" href="#"><span class="material-symbols-outlined">menu</span></a>
+                <div id="select_mode"><span class="material-symbols-outlined" id="activate_mode">dark_mode</span></div>
+                
+                <ul>                 
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#process">Процесс обучения</a></li>
+                    <li><a href="#firstlesson">Пробное занятие</a></li>
+                    <li><a href="#calendar">Календарь</a></li>
+                    <li><a href="#questions">Вопросы</a></li>
+                </ul>
+          </div>
+        <!-- MENU MOBILE -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+            <div id="myDropdown2" class="select_mode">
+                <span class="material-symbols-outlined" id="activate_mode2">dark_mode</span>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#about">Обо мне</a>
+                <a href="#process">Процесс обучения</a>
+                <a href="#firstlesson">Пробное занятие</a>
+                <a href="#calendar">Календарь</a>
+                <a href="#questions">Вопросы</a>
+            </div>
+        </div>
+        <!-- MENU MOBILE -->
+
+        <div id="header">
+            <div id="main-line">yourteach</div>
+            <div id="main-downline">индивидуальные онлайн занятия по программированию для подростков 10-17 лет</div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="content">
+            <h1>Обо мне</h1>
+            <p>Приветствую! Меня зовут Фёдор, мне 26 лет.<br/>
+            Вот уже четвертый год я дистанционно обучаю программированию и смежным областям,
+            из них два года работал в онлайн-школе. Получив определенный опыт и осознав,
+            что мое представление об образовании отличается, я ушел во фриланс. 
+            За это время успел сформировать собственную методику обучения, которая улучшается из урока в урок.
+            Почему мною была выбрана именно эта стезя?
+            Думаю это объясняется простым выражением: "Преподаватель - это призвание".
+            На уроках помогаю развивать в себе следующие навыки:
+            самостоятельно справляться с задачами,
+            правильно ставить цели, и осознанно подходить к своему делу.
+            Кратко о моих интересах, помимо программирования: фотография, музыка, психология и философия.<br/>
+            Вы можете написать мне в 
+            <a class="link1" style="filter: saturate(0.6)" href="https://t.me/ergoBound" target="_blank">telegram</a>,
+            но прежде советую посмотреть
+            <a id="link1" style="filter: saturate(0.6)" href="#calendar">календарь</a> свободных слотов!
+            </p>
+
+            <br/><br/>
+            <!-- Profi.ru widget start -->  
+            <center><div class="clickProfi" style="cursor:pointer; width: 300px; height: 100px;">
+            <div class="profi-widget" style="filter: saturate(0.4); pointer-events: none;" data-id="5e7a19822870770ad0061e4d0e8c5f7f" data-type="300x100">
+                Powered by <a href="https://profi.ru/profile/MorozovFE">Profi.ru</a>
+            </div></div></center>
+            <script src="https://profi.ru/jqs/widget/widget.js"></script>
+            <!-- Profi.ru widget end -->
+        </div>
+            
+    </section> 
+    <section id="process">
+        <div class="content">
+            <h1>Процесс обучения</h1>
+            <p>Знание приходит с вопроса. <br/> Если ученик имеет собственный интерес к предмету, то можно нырять в тему с головой.
+            Но бывает так, что ученик не имеет никакого представления о программировании.
+            В таком случае я прохожусь по самым основным понятиям и ввожу в курс дела.
+            Ученику в свою очередь рекомендуется в начале такого обучения нащупать свой интерес.
+            Ведь без интереса далеко не уйдешь, или дорога будет тяжелой.
+            Желательно приходить на урок вместе со своими вопросами,
+            и по возможности с готовым домашним заданием.
+            На занятиях стараюсь держать сбалансированную атмосферу. 
+            Иногда с учениками 'сёрфим' интернет в поисках необходимой информации,
+            и учимся её интерпретировать.<br/>
+            Одно занятие длится - 60 минут.
+            </p>
+            <p id="directions">Основные направления:<br/> Python / Lua / Roblox Studio</p>
+            <table class="g-desktop" style="filter: saturate(0.6)">
+                <tr>
+                  <td style="vertical-align: middle;"><span class="material-symbols-outlined" id="one" onclick="left();">arrow_back_ios</span></td>
+                  <td style="vertical-align: middle; overflow:hidden; position: relative;">
+                    <img class="gallery" id="img0" src="img\0.png" style="position: relative; z-index: -1000;">
+                    <script type="text/javascript">
+                        
+                        for (i = 1; i <= 15; i++) {
+                            id = "img" + String(i)
+                            src = "img/" + String(i) + ".png"
+                            elem = '<img class="gallery" id="'+id+'" src="'+src+'" style="position: absolute;">'
+                            document.write (elem)
+                        }
+                    </script>
+                  </td>
+                  <td style="vertical-align: middle;"><span class="material-symbols-outlined" id="two" onclick="right();">arrow_forward_ios</span></td>
+                </tr>
+            </table>
+            <div class="g-mobile" style= "text-align: center; filter: saturate(0.6)">
+                <span class="material-symbols-outlined" id="inner1" onclick="leftMob();">arrow_back_ios</span>
+                <div style="vertical-align: middle; overflow:hidden; position: relative;">
+                    <img class="mob-gallery" id="img0" src="img\mobile\0.png" style="position: relative; z-index: -1000;">
+                    <script type="text/javascript">
+                        for (i = 1; i <= 15; i++) {
+                            id = "img" + String(i)
+                            src = "img/mobile/" + String(i) + ".png"
+                            elem = '<img class="mob-gallery" id="'+id+'" src="'+src+'" style="position: absolute;">'
+                            document.write (elem)
+                        }
+                    </script>
+                    <a class="link" id="link1" onclick="leftMob();"></a> 
+                    <a class="link" id="link2" onclick="rightMob();"></a> 
+                    <!-- <a class="link" id="link3" onclick="leftMob();"></a> 
+                    <a class="link" id="link4" onclick="rightMob();"></a>  -->
+                </div>
+                <span class="material-symbols-outlined" id="inner2" onclick="rightMob();">arrow_forward_ios</span>
+            </div>
+            
+            <p><br/></p>
+            
+            <h3>Программирование на языках Python, Lua (Roblox Studio):</h3>
+            <p>Это мое основное направление. Углубленное изучение программирования, требующее усидчивости и немного 
+            личного интереса к предмету. Проходим с учеником детально основные аспекты языка. 
+            В процессе решаем упражнения, задачи. Подтягиваем математику, если необходимо. 
+            Если материал даётся ученику сложно, то мы замедляем темп, чтобы избежать перегорания. 
+            Если возникают пробелы в знании, то я считаю своим долгом вернуться назад 
+            и еще раз объяснить материал.
+            В лучшем случае и при большом желании, за год обучения можно научиться создавать небольшие 
+            игры и программы на пк.
+            </p>
+
+            <!-- <h3>Остальные направления:</h3> -->
+            <p id="directions">Дополнительные программы:<br/> Blender / Premiere Adobe / Photoshop / Aseprite</p>
+            <p>Надо учесть, что иногда бывает необходимость временно перейти на второстепенные дополнительные программы. 
+            Например, в момент написания кода для персонажа, нужно сделать для него персональную 2d картинку 
+            в редакторе изображений. Или даже создать 3D-модель в программе Blender. 
+            С продвинутыми учениками мы часто плаваем от одного направления к другому. 
+            С помощью такого подхода исключается вероятность перегорания, 
+            а творческое мышление становится более гибким. В этих дополнительных программах я помогаю освоиться
+            поверхностно. Если вам нужно, например, более глубокое изучение 3д-моделирование, то советую обратиться
+            к преподавателю узко специализирующемуся в данном направлении.</p>
+
+            <p id="directions">Стоимость занятия - 1000р (60минут)</p>
+        
+        </div>
+    </section>
+    <section id="firstlesson">
+        <div class="content">
+            <h1>Пробное занятие</h1>
+            <p>Начинается всё с первого урока, длительностью в 60 минут.
+            На нём мы познакомимся, я расскажу о направлении
+            которое вы выбрали, затронем самые основы программы/языка программирования,
+            и попробуем что-нибудь сделать на практике.
+            Проверю уровень компьютерной грамотности ученика. 
+            По итогу вы сможете понять подходит ли Вам такой формат обучения.
+            А я в свою очередь дам обратную связь по прошедшему занятию.
+            Итоги обсуждаются в мессенджере после урока.
+            </p>
+            <!-- <p id="directions">Стоимость пробного занятия - 500р (40 минут)</p> -->
+        </div>
+    </section>
+    <section id="calendar">
+        <div class="content" id="calendar_desktop">
+            <h1>Календарь</h1>
+            <iframe id="calendar_frame" src="https://calendar.google.com/calendar/u/0/embed?height=500&wkst=2&bgcolor=%23ffffff&ctz=Europe/Moscow&showTitle=0&showNav=0&mode=MONTH&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showDate=0&src=dGZvaTM3bW9na2c3NG9ia21rbjFkMjlvdHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300" style="border-width:0" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="content" id="calendar_mobile">
+            <h1>Календарь</h1>
+        <iframe id="calendar_frame" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FMoscow&showNav=0&showTitle=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=dGZvaTM3bW9na2c3NG9ia21rbjFkMjlvdHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300" style="border-width:0" width="100%" height="780px" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </section>
+    <section id="questions">
+        <div class="content">
+            <h1>Ответы на вопросы</h1>
+            <dl>
+                <dt tabindex="0">Что нужно для первого урока?</dt>
+                    <dd>Компьютер, установленная на нем программа Zoom, вебкамера, микрофон, и желание обучаться!</dd>
+                <dt tabindex="1">Какое направление посоветуете выбрать? С чего начать?</dt>
+                    <dd>Зависит от опыта работы с компьютером. Если его мало, 
+                        то я советую начинать с простого, с блочного программирования на Scratch, 
+                        Если нет опыта работы с пк, то советую поднять уровнь компьютерной грамотности,
+                        и только потом возвращаться к вопросу об изучении программирования.
+                        </dd>
+                <dt tabindex="2">Нужно ли Родителю присутствовать на уроке?</dt>
+                    <dd>Это необязательно, занятия удачно проходят в формате 1 на 1.
+                        Но вы можете присутствовать на уроке по своему желанию и наблюдать за процессом обучения.
+                        Единственное, во время урока ученику рекомендуется всё выполнять
+                        самостоятельно, родителю не стоит подсказывать или пересказывать
+                        действия, которые я продемонстрировал.</dd>
+                <dt tabindex="3">Нет мотивации делать домашние задания, что посоветуете?</dt>
+                    <dd>Заставить своих учеников делать домашние задания я не могу. 
+                        Но могу дать совет. Открываете код или программу в которой учитесь. 
+                        Минут 5-10 смотрите глазами на то что прошли или еще не прошли. Что-то вроде медитации,
+                        только объект внимания - предмет изучения.
+                        После этого может появиться желание не только смотреть, но и делать.
+                        Зрительный контакт с тем что вызывает сложности - хорошая практика.</dd>
+                <dt tabindex="4">Есть ли возможность отменить или перенести занятие?</dt>
+                    <dd>Можно отменить урок с сохранением на следующий месяц. Главное предупредить
+                        об этом за 8 часов до урока, иначе занятие пропадет! Исключение: непредвиденные обстоятельства.</dd>
+            </dl> 
+            <!-- <p><br/><br/></p> -->
+        </div>
+    </section>
+    <!-- <div id="bottom-line">
+        <br/><center>Сайт полностью сделан мною
+            <script type="text/javascript">
+                if (screen.width < 550) document.write ('<br/>')
+            </script>
+            и является показателем моего опыта.</center><br/>
+    </div> -->
+    <div id="magnify_emulation">
+        <img src="img/0.png">
+    </div>
+
+    <script type="text/javascript">
+        if (screen.width > 480) document.write ('<script src="menu.js"></sc' + 'ript>')
+    </script>
+    <script src="script.js" type='text/javascript'></script>
+    <script src="menu_mobile.js"></script>
+    <script src="gallery.js"></script>
+    <script src="gallery_mobile.js"></script>
+    <div></div>
+</body>
+</html>
