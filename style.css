@@ -180,7 +180,7 @@ table {
 /* Кнопки переключение изображений в галереи   КОНЕЦ */
 
 .content#calendar_desktop iframe {
-  clip-path: polygon(0% 0, 100% 0, 100% 95.4%, 0% 95.4%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 94.2%, 0% 94.2%);
 }
 .content#calendar_mobile {
   display: none;
