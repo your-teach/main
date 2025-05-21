@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+          />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+          />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css"
+          />
+    <style>
+        html {
+            background-color: grey;
+        }
+      /* img {
+        max-width: 100%;
+        height: auto;
+      } */
+
+      #myCarousel {
+        /* 640x480 */
+        max-width: 640px;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      #myCarousel .f-carousel__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    button.f-button {
+        mix-blend-mode: difference;
+        color:grey;
+    }
+    button.f-button.is-next:hover {
+        color:rgb(43, 43, 226);
+    }
+    button.f-button.is-prev:hover {
+        color:rgb(43, 43, 226);
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="f-carousel" id="myCarousel">
+        <!-- <div
+             class="f-carousel__slide"
+             href="https://lipsum.app/id/1/1280x960"
+             data-fancybox="gallery"
+             >
+          <img
+               alt=""
+               data-lazy-src="https://lipsum.app/id/1/640x480"
+               />
+        </div> -->
+        <div
+             class="f-carousel__slide"
+                href="c:\Users\bound\Desktop\Снимок экрана (232)2.png"
+             data-fancybox="gallery"
+             >
+          <img
+               alt="" style="height: 480px; width: auto;" class="carousel"
+               data-lazy-src="c:\Users\bound\Desktop\Снимок экрана (232)2.png"
+               />
+        </div>
+                <div
+             class="f-carousel__slide"
+                href="c:\Users\bound\Desktop\Снимок экрана (232)2.png"
+             data-fancybox="gallery"
+             >
+          <img
+               alt="" style="height: 480px; width: auto;" class="carousel"
+               data-lazy-src="c:\Users\bound\Desktop\Снимок экрана (232)2.png"
+               />
+        </div>
+        <!-- <div
+             class="f-carousel__slide"
+                href="https://lipsum.app/id/3/1280x960"
+             data-fancybox="gallery"
+             >
+          <img
+               alt=""
+               data-lazy-src="https://lipsum.app/id/3/640x480"
+               />
+        </div> -->
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+      new Carousel(document.getElementById("myCarousel"), {
+        // Your custom options
+        Dots: false});
+    </script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        Hash: false,
+        Thumbs: false,
+        compact: false,
+        width: "auto",
+        contentClick: "toggleCover",
+        wheel : "slide",
+
+        Toolbar: {
+          display: {
+            left: [],
+            middle: [],
+            right: ["close"],
+          },
+        },
+
+        Images: {
+          Panzoom: {
+            panMode: "mousemove",
+            mouseMoveFactor: 1.1,
+            mouseMoveFriction: 0.12
+          },
+        },
+      });    
+    </script>
+    <script>
+      
+      var imgs = document.getElementsByClassName("carousel");
+      console.log(imgs)
+      console.log(imgs[0].scrollWidth);
+    </script>
+  </body>
+</html>
