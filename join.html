@@ -7,28 +7,29 @@
     <meta name="color-scheme" content="dark">
     <title>Подключение к занятию</title>
 
+
     <script>
         const CONFIG = {
             // lessonTitle: 'Занятие по программированию',
             // lessonTopic: 'none', // Например: 'Тема: Функции и алгоритмы' или 'none'
 
             // 1. Основная кнопка Zoom
-            // zoomLink: 'https://zoom.us/',
-            // zoomText: 'Подключиться к занятию через Zoom',
+            zoomLink: 'https://us05web.zoom.us/j/5321157397?pwd=A9m2cikfgTgqTTFmcJbUiMOSAOmqCY.1',
+            zoomText: 'Открыть ссылку для подключения к занятию',
             // zoomPasscode: '123456',
-            // telegramUsername: 'ergobound'
+            // telegramUsername: 'ergobound',
 
             // 2. Вторая кнопка (Шалфейный)
-            materialsLink: 'none',
+            // materialsLink: 'https://zoom.us/',
             materialsText: 'Материалы к уроку',
 
             // 3. Третья кнопка (Лавандовый)
-            homeworkLink: 'none',
+            // homeworkLink: 'https://zoom.us/',
             homeworkText: 'Домашнее задание',
 
             // 4. Четвертая кнопка (Персиковый)
-            recordingLink: 'none',
-            recordingText: 'Запись прошлого урока',
+            // recordingLink: 'https://zoom.us/',
+            recordingText: 'Запись прошлого урока'
 
             
         };
@@ -58,13 +59,13 @@
             min-height: 100dvh;                 /* корректно на мобильных с адресной строкой */
             display: flex;
             flex-direction: column;
-            background-color: #362d38;
-            background-image: radial-gradient(circle at 50% 30%, #463948 0%, #28212b 100%);
+            background-color: #251f2775;
+            background-image: radial-gradient(circle at 50% 30%, #231d23c7 0%, #28212b 100%);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #e2dce4;
 
             /* отступы + учёт «челки» и скруглений экрана (safe-area) */
-            --page-pad: clamp(12px, 3.5vw, 24px);
+            --page-pad: clamp(12px, 3.5vw, 24px);   
             padding-top: max(var(--page-pad), env(safe-area-inset-top));
             padding-right: max(var(--page-pad), env(safe-area-inset-right));
             padding-bottom: max(var(--page-pad), env(safe-area-inset-bottom));
@@ -86,11 +87,11 @@
         .ambient-glow {
             position: absolute;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.15;
+            /* filter: blur(0px); */
+            opacity: 0.009;
         }
-        .glow-1 { width: 450px; height: 450px; background: #f4a2b8; top: -150px; left: 15%; }
-        .glow-2 { width: 400px; height: 400px; background: #c58af9; bottom: -150px; right: 15%; }
+        .glow-1 { width: 800px; height: 800px; background: #c4ff01; top: -150px; left: 15%; }
+        .glow-2 { width: 800px; height: 800px; background: #03c8de; bottom: -150px; right: 15%; }
 
         /* ---------- ОКНО IDE ---------- */
         .ide-window {
@@ -99,12 +100,12 @@
             margin: auto;                       /* вместо align-items: center — не обрезает контент */
             width: 100%;
             max-width: 760px;
-            background: rgba(36, 40, 59, 0.75);
+            background: rgba(49, 51, 60, 0.75);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(180, 195, 235, 0.16);
+            border: 1px solid rgba(134, 134, 134, 0.16);
             border-radius: clamp(16px, 4vw, 20px);
-            box-shadow: 0 25px 50px -12px rgba(15, 12, 22, 0.45);
+            box-shadow: 0 10px 15px -4px rgba(0, 0, 0, 0.45);
             overflow: hidden;
         }
 
@@ -115,7 +116,7 @@
             justify-content: space-between;
             gap: 10px;
             padding: 14px clamp(14px, 4vw, 20px);
-            background: rgba(26, 29, 44, 0.6);
+            background: rgba(12, 10, 21, 0.609);
             border-bottom: 1px solid rgba(180, 195, 235, 0.08);
         }
 
@@ -185,7 +186,7 @@
 
         .empty-message {
             font-family: 'JetBrains Mono', monospace;
-            color: #9aa7c7;
+            color: #b5bbca;
             font-size: clamp(12px, 3.4vw, 14px);
             padding: 18px 22px;
             background: rgba(255, 255, 255, 0.03);
