@@ -16,7 +16,7 @@
             // 1. Основная кнопка Zoom
             zoomLink: 'https://us06web.zoom.us/j/8586157252?pwd=SYi6aDS5uf33FougVUG4ah3bwpW0ac.1',
             zoomText: 'Открыть ссылку для подключения к занятию',
-            // zoomPasscode: '123456',
+            zoomPasscode: 'DxvkT9',
             // telegramUsername: 'ergobound',
 
             // 2. Вторая кнопка (Шалфейный)
@@ -36,7 +36,7 @@
     </script>
     <!-- ================================================================= -->
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b4cbe8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='23 7 16 12 23 17 23 7'/><rect x='1' y='5' width='15' height='14' rx='2' ry='2'/></svg>">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bccce0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='23 7 16 12 23 17 23 7'/><rect x='1' y='5' width='15' height='14' rx='2' ry='2'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -217,7 +217,7 @@
             text-align: center;
 
             color: #1e293b;
-            background-color: #b4cbe8;
+            background-color: #bccce0;          /* было #b4cbe8 — насыщенность -30% */
             border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 12px;
             text-decoration: none;
@@ -238,9 +238,9 @@
             width: auto;
             max-width: 100%;   /* страховка на очень узких экранах */
         }
-        .btn-sage { background-color: #b8ccb9; color: #1a2e1f; }
-        .btn-lavender { background-color: #cbbbe0; color: #231936; }
-        .btn-peach { background-color: #dfc2b2; color: #331f13; }
+        .btn-sage { background-color: #bac8bb; color: #1a2e1f; }      /* было #b8ccb9 */
+        .btn-lavender { background-color: #ccc0da; color: #231936; }  /* было #cbbbe0 */
+        .btn-peach { background-color: #d8c3b8; color: #331f13; }     /* было #dfc2b2 */
 
         /* ---------- КОД ДОСТУПА ---------- */
         .passcode-wrapper { margin-top: clamp(18px, 4vw, 26px); }
@@ -303,35 +303,33 @@
         /* ---------- HOVER ТОЛЬКО НА УСТРОЙСТВАХ С МЫШЬЮ ---------- */
         @media (hover: hover) and (pointer: fine) {
             .btn:hover {
-                background-color: #bfd5f0;
+                background-color: #c6d6e8;          /* было #bfd5f0 — насыщенность -30% */
                 border-color: #ffffffc6;
                 box-shadow: 0 0 0 3px rgba(0, 34, 75, 0.736);
             }
             .btn-sage:hover {
-                background-color: #c3d6c4;
+                background-color: #c5d2c6;          /* было #c3d6c4 */
                 border-color: #ffffff;
                 box-shadow: 0 0 0 3px rgba(184, 204, 185, 0.4);
             }
             .btn-lavender:hover {
-                background-color: #d5c6e8;
+                background-color: #d5cbe3;          /* было #d5c6e8 */
                 border-color: #ffffff;
                 box-shadow: 0 0 0 3px rgba(203, 187, 224, 0.4);
             }
             .btn-peach:hover {
-                background-color: #e8ccbd;
+                background-color: #e1cdc3;          /* было #e8ccbd */
                 border-color: #ffffff;
                 box-shadow: 0 0 0 3px rgba(223, 194, 178, 0.4);
             }
             .passcode-box:hover {
-                border-color: rgba(255, 255, 255, 0.4);
-                box-shadow: 0 0 0 2px rgba(180, 195, 235, 0.15);
-                color: #d2dcf5;
+                border-color: rgba(255, 255, 255, 0.24);      /* было 0.4 — мягче, но всё ещё белый */
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06); /* было bluish 0.15 — теперь нейтральный белый, почти незаметный */
+                color: #d2dcf5b8;
             }
             .tg-link:hover {
                 color: rgba(178, 212, 254, 0.889);
                 background: rgba(180, 203, 232, 0.045);
-                border-color: rgba(255, 255, 255, 0);
-                /* box-shadow: 0 0 0 2px rgba(180, 203, 232, 0); */
             }
         }
 
@@ -340,7 +338,7 @@
 
         .btn:focus-visible,
         .tg-link:focus-visible {
-            outline: 2px solid #b4cbe8;
+            outline: 2px solid #bccce0;
             outline-offset: 3px;
         }
 
@@ -402,9 +400,7 @@
                 <span class="dot dot-green"></span>
             </div>
             <div class="window-tab">
-                <!-- your-teach <span>&lt;/&gt;</span> -->
-                 <!-- <span>&lt;/&gt;</span> -->
-                  <span>Занятия по программированию</span> 
+                <span>Занятия по программированию</span> 
             </div>
             <div class="window-spacer"></div>
         </div>
@@ -426,8 +422,11 @@
             return t !== '' && t !== 'none' && t !== 'null' && t !== 'false';
         }
 
-        if (isActive(CONFIG.lessonTitle)) {
-            document.getElementById('mainTitle').textContent = CONFIG.lessonTitle;
+        // Заголовок и тема — опционально. Проверяем существование элемента,
+        // чтобы не упасть, если <h1 id="mainTitle"> отсутствует в разметке.
+        const mainTitleEl = document.getElementById('mainTitle');
+        if (mainTitleEl && isActive(CONFIG.lessonTitle)) {
+            mainTitleEl.textContent = CONFIG.lessonTitle;
         }
 
         if (isActive(CONFIG.lessonTopic)) {
@@ -441,7 +440,7 @@
             {
                 link: CONFIG.zoomLink,
                 text: CONFIG.zoomText || 'Подключиться к занятию через Zoom',
-                className: 'btn btn-primary',   // ← было 'btn'
+                className: 'btn btn-primary',
                 icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>`
             },
             {
@@ -505,7 +504,7 @@
             const orig = box.innerHTML;
             box.addEventListener('click', () => {
                 const done = () => {
-                    box.innerHTML = '<span style="color: #b8ccb9;">✓ скопировано</span>';
+                    box.innerHTML = '<span style="color: #bac8bb;">✓ скопировано</span>';
                     setTimeout(() => box.innerHTML = orig, 2000);
                 };
                 if (navigator.clipboard && navigator.clipboard.writeText) {
