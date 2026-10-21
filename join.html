@@ -16,7 +16,12 @@
             // 1. Основная кнопка Zoom
             zoomLink: 'https://us06web.zoom.us/j/8586157252?pwd=SYi6aDS5uf33FougVUG4ah3bwpW0ac.1',
             zoomText: 'Открыть ссылку для подключения к занятию',
-            zoomPasscode: 'DxvkT9',
+            // zoomPasscode: 'DxvkT9',
+
+            // Ссылка на скачивание Zoom ('none' чтобы скрыть)
+            zoomDownloadLink: 'https://zoom.us/download',
+            zoomDownloadText: 'Скачать Zoom',
+
             // telegramUsername: 'ergobound',
 
             // 2. Вторая кнопка (Шалфейный)
@@ -253,8 +258,8 @@
             gap: 8px;
             max-width: 100%;
             padding: 9px 16px;
-            background: rgba(20, 23, 36, 0.5);
-            border: 1px solid rgba(180, 195, 235, 0.12);
+            background: rgba(20, 23, 36, 0.163);
+            /* border: 1px solid rgba(180, 195, 235, 0.12); */
             border-radius: 8px;
             font-family: 'JetBrains Mono', monospace;
             font-size: clamp(11px, 3.2vw, 12px);
@@ -271,6 +276,35 @@
             overflow-wrap: anywhere;
         }
         .passcode-box svg { width: 14px; height: 14px; opacity: 0.7; flex-shrink: 0; }
+
+        /* ---------- СКАЧАТЬ ZOOM ---------- */
+        .download-wrapper {
+            margin-top: clamp(8px, 1.6vw, 12px);
+            text-align: center;
+            font-size: clamp(11px, 3vw, 12px);
+        }
+
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: inherit;
+            color: #8c98b8;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: color 0.2s ease, background-color 0.2s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .download-link svg { width: 13px; height: 13px; opacity: 0.75; flex-shrink: 0; }
+
+        .download-link:focus-visible {
+            outline: 2px solid #bccce0;
+            outline-offset: 3px;
+        }
 
         /* ---------- TELEGRAM ---------- */
         .telegram-wrapper {
@@ -326,6 +360,10 @@
                 border-color: rgba(255, 255, 255, 0.24);      /* было 0.4 — мягче, но всё ещё белый */
                 box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06); /* было bluish 0.15 — теперь нейтральный белый, почти незаметный */
                 color: #d2dcf5b8;
+            }
+            .download-link:hover {
+                color: #b4cbe8;
+                background: rgba(180, 203, 232, 0.05);
             }
             .tg-link:hover {
                 color: rgba(178, 212, 254, 0.889);
@@ -411,6 +449,7 @@
 
             <div class="button-container" id="buttonContainer"></div>
             <div class="passcode-wrapper" id="passcodeWrapper" style="display: none;"></div>
+            <div class="download-wrapper" id="downloadWrapper" style="display: none;"></div>
             <div class="telegram-wrapper" id="telegramWrapper" style="display: none;"></div>
         </div>
     </div>
@@ -513,6 +552,18 @@
                     done();
                 }
             });
+        }
+
+        // Ссылка на скачивание Zoom
+        const downloadWrapper = document.getElementById('downloadWrapper');
+        if (isActive(CONFIG.zoomDownloadLink)) {
+            downloadWrapper.style.display = 'block';
+            downloadWrapper.innerHTML = `
+                <a href="${CONFIG.zoomDownloadLink}" target="_blank" rel="noopener noreferrer" class="download-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>${CONFIG.zoomDownloadText || 'Скачать Zoom'}</span>
+                </a>
+            `;
         }
 
         // Блок со ссылкой на Telegram
